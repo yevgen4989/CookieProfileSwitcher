@@ -10,12 +10,6 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 }
 
-#donate-button {
-	position: absolute;
-	right: 0;
-	top: 1.5em;
-}
-
 /*.form-horizontal input[type="text"],
 .form-horizontal input[type="password"],
 .form-horizontal input[type="email"],

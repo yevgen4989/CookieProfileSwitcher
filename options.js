@@ -20,14 +20,14 @@ function loadProfileData(){
 	chrome.storage.local.get('profiles', function(items){
 		var profile;
 		if(jQuery.isEmptyObject(items) || jQuery.isEmptyObject(items.profiles)){
-			
+
 		}
 		else{
 			profile = JSON.parse(JSON.stringify(items.profiles));
 			$('#profile-data-textarea').val(JSON.stringify(profile, undefined, "\t"));
 		}
 	});
-	
+
 }
 
 function saveProfileData(){
@@ -39,7 +39,7 @@ function saveProfileData(){
 		}
 		else{
 		}
-		
+
 	}
 }
 
@@ -57,7 +57,7 @@ function exportProfileData(){
 	chrome.storage.local.get('profiles', function(items){
 		var profile;
 		if(jQuery.isEmptyObject(items) || jQuery.isEmptyObject(items.profiles)){
-			
+
 		}
 		else{
 			profile = JSON.parse(JSON.stringify(items.profiles));
@@ -78,7 +78,7 @@ function clearCookieData(){
 }
 
 function sendEmail() {
-    var emailUrl = "mailto:emerysteele@gmail.com?Subject=Cookie%20Profile%20Switcher%20-%20Feedback";
+    var emailUrl = "mailto:yevgenpisotsky@gmail.com?Subject=Cookie%20Profile%20Switcher%20-%20Feedback";
     chrome.tabs.create({ url: emailUrl }, function(tab) {
         setTimeout(function() {
             chrome.tabs.remove(tab.id);
@@ -148,5 +148,5 @@ document.addEventListener('DOMContentLoaded', function() {
   //document.querySelector('#filter_div input').addEventListener(
   //    'input', reloadCookieTable);
   //document.querySelector('#filter_div button').addEventListener(
-  //    'click', resetFilter); 
+  //    'click', resetFilter);
 });
